@@ -39,6 +39,7 @@ The create method inserts a document into the collection.
 
 **Read Method**
 The read method queries for documents in the collection based on a given query.
+
 	query = {"species": "Dog"}
 	dogs = shelter.read(query)
 	print(f"Found dogs: {dogs}")
