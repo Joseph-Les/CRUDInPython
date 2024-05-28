@@ -1,7 +1,7 @@
 from animal_shelter import AnimalShelter
 
 # Initialize the AnimalShelter instance
-shelter = AnimalShelter(user='accuser', password='SNHU1234', host='nv-desktop-services.apporto.com', port=32592, db='AAC', collection='animals')
+shelter = AnimalShelter(user='', password='', host='', port=, db='', collection='')
 
 # Create a new animal document
 new_animal = {
