@@ -6,9 +6,9 @@ This project provides a Python module for performing CRUD (Create, Read, Update,
 
 **Setup Instructions**
 Prerequisites
-	Python 3.x
-	MongoDB server
-	pymongo library
+1. Python 3.x
+2. MongoDB server
+3. pymongo library
 
 **Installation**
 1. Clone the repository:
