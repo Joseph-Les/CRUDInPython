@@ -21,7 +21,8 @@ Prerequisites
 **Usage**
 Initialization
 The AnimalShelter class is used to interact with the MongoDB collection. You need to initialize it with your MongoDB connection details.
-	```shelter = AnimalShelter(user='', password='', host='', port=, db='', collection='')```
+
+	shelter = AnimalShelter(user='', password='', host='', port=, db='', collection='')
 
 **Create Method**
 The create method inserts a document into the collection.
