@@ -54,11 +54,12 @@ The read method queries for documents in the collection based on a given query.
 **Testing**
 
 1. Ensure you your mongo database server is running. Gather the DB name and the user to be used.
+   
 	1A. If you would like, create a new user to interact with the database:
 
     	db.createUser ({ user: "<name of the user>", pwd: "<password>", roles [( role: "readWrite", db: "<name of database>" }] })
    
-3. After successfully gathering your DB and User information, start a new Jupyter Notebook.
-4. Insert the python program into the first cell of the Jupyter Notebook. Replace user, passwprd, host, port, db, collection, with your own user information.
-5. If using a different database, please edit the Create and Read method to match your collection.
-6. Execute the code in Jupyter Notebook.
+2. After successfully gathering your DB and User information, start a new Jupyter Notebook.
+3. Insert the python program into the first cell of the Jupyter Notebook. Replace user, passwprd, host, port, db, collection, with your own user information.
+4. If using a different database, please edit the Create and Read method to match your collection.
+5. Execute the code in Jupyter Notebook.
