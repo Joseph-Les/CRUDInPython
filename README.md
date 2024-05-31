@@ -13,7 +13,7 @@ This repo provides a Python module for performing CRUD (Create, Read, Update, De
 Prerequisites
 1. Python 3.x
 2. MongoDB server
-3. pymongo library
+3. `pymongo` library
 
 **Installation**
 1. Clone the repository:
@@ -53,14 +53,18 @@ The read method queries for documents in the collection based on a given query.
 
 **Testing**
 
-1. Ensure you your mongo database server is running. Gather the DB name and the user to be used.
+To ensure the functionality of the module, follow these steps to test it using a Jupyter Notebook.
+
+1. Ensure your MongoDB server is running. Gather your database name and the user credentials..
    
-	1A. If you would like, create a new user to interact with the database:
+	1A. Create a new user (optional):
 
     	db.createUser ({ user: "<name of the user>", pwd: "<password>", roles [( role: "readWrite", db: "<name of database>" }] })
    
-2. After successfully gathering your DB and User information, start a new Jupyter Notebook.
-3. Insert the test script into the first cell of the Jupyter Notebook. Replace user, passwprd, host, port, db, collection, with your own user information.
-4. If using a different database, please edit the Create and Read method to match your collection.
-5. Create a python script within the same directory of your Jupyter Notebook, using animal_shelter.py
-6. Execute the code in Jupyter Notebook.
+2. Start a new Jupyter Notebook.
+3. Insert the test script into the first cell of the Jupyter Notebook. Replace user, password, host, port, db, and collection with your own user information.
+4. Edit the Create and Read methods to match your collection if using a different database structure.
+5. Create a Python script within the same directory as your Jupyter Notebook, named animal_shelter.py, containing the AnimalShelter class definition.
+6. Execute the code in the Jupyter Notebook to test the Create and Read functionalities.
+
+By following these instructions, you should be able to reproduce and test the functionality of the Animal Shelter CRUD operations module.
