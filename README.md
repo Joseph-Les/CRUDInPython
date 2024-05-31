@@ -5,6 +5,7 @@
 This project provides a Python module for performing CRUD (Create, Read, Update, Delete) operations on a MongoDB database. (Update and Delete is work in progress) The module is designed to be reusable and can be imported into other Python scripts or Jupyter Notebooks. It includes a class, AnimalShelter, that provides methods to interact with a MongoDB collection.
 
 **Setup Instructions**
+
 Prerequisites
 1. Python 3.x
 2. MongoDB server
@@ -18,13 +19,14 @@ Prerequisites
 3. Ensure your MongoDB server is running.
 
 
-**Usage**
-Initialization
+**Usage - Initialization**
+
 The AnimalShelter class is used to interact with the MongoDB collection. You need to initialize it with your MongoDB connection details.
 
 	shelter = AnimalShelter(user='', password='', host='', port=, db='', collection='')
 
 **Create Method**
+
 The create method inserts a document into the collection.
 	
 	new_animal = {
