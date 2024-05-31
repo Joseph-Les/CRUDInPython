@@ -38,6 +38,7 @@ The create method inserts a document into the collection.
 	print(f"Insert success: {insert_success}")
 
 **Read Method**
+
 The read method queries for documents in the collection based on a given query.
 
 	query = {"species": "Dog"}
@@ -45,4 +46,5 @@ The read method queries for documents in the collection based on a given query.
 	print(f"Found dogs: {dogs}")
 
 **Testing**
+
 Open a new Jupyter Notebook to Test the CRUD operations. Ensure the test and  animal_shelter files are in the same directly, then insert the test with your DB information. Run test.
