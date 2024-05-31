@@ -12,7 +12,7 @@ Prerequisites
 
 **Installation**
 1. Clone the repository:
-	```git clone https://github.com/your-username/animal-shelter-crud.git```
+	```git clone https://github.com/Joseph=Les/animal-shelter-crud.git```
 2. Install the required Python packages:
 	```pip install pymongo```
 3. Ensure your MongoDB server is running.
