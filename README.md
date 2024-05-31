@@ -4,6 +4,10 @@
 
 This project provides a Python module for performing CRUD (Create, Read, Update, Delete) operations on a MongoDB database. (Update and Delete is work in progress) The module is designed to be reusable and can be imported into other Python scripts or Jupyter Notebooks. It includes a class, AnimalShelter, that provides methods to interact with a MongoDB collection.
 
+**Example**
+
+![Screenshot 2024-05-30 at 6 41 51 PM](https://github.com/Joseph-Les/CRUDInPython/assets/84045743/dffe0601-efe4-4b1e-8ca3-7140f84e5d03)
+
 **Setup Instructions**
 
 Prerequisites
