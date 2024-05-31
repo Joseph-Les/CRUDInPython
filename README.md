@@ -2,7 +2,7 @@
 
 **Project Overview**
 
-This project provides a Python module for performing CRUD (Create, Read, Update, Delete) operations on a MongoDB database. (Update and Delete is work in progress) The module is designed to be reusable and can be imported into other Python scripts or Jupyter Notebooks. It includes a class, AnimalShelter, that provides methods to interact with a MongoDB collection.
+This repo provides a Python module for performing CRUD (Create, Read, Update, Delete) operations on a MongoDB database (update and Delete is work in progress). The module is designed to be reusable and can be imported into other Python scripts or Jupyter Notebooks. It includes a class, AnimalShelter, that provides methods to interact with a MongoDB collection.
 
 **Example**
 
@@ -53,4 +53,12 @@ The read method queries for documents in the collection based on a given query.
 
 **Testing**
 
-Open a new Jupyter Notebook to Test the CRUD operations. Ensure the test and  animal_shelter files are in the same directly, then insert the test with your DB information. Run test.
+1. Ensure you your mongo database server is running. Gather the DB name and the user to be used.
+	1A. If you would like, create a new user to interact with the database:
+
+    	db.createUser ({ user: "<name of the user>", pwd: "<password>", roles [( role: "readWrite", db: "<name of database>" }] })
+   
+3. After successfully gathering your DB and User information, start a new Jupyter Notebook.
+4. Insert the python program into the first cell of the Jupyter Notebook. Replace user, passwprd, host, port, db, collection, with your own user information.
+5. If using a different database, please edit the Create and Read method to match your collection.
+6. Execute the code in Jupyter Notebook.
