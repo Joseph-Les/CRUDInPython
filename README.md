@@ -60,6 +60,7 @@ The read method queries for documents in the collection based on a given query.
     	db.createUser ({ user: "<name of the user>", pwd: "<password>", roles [( role: "readWrite", db: "<name of database>" }] })
    
 2. After successfully gathering your DB and User information, start a new Jupyter Notebook.
-3. Insert the python program into the first cell of the Jupyter Notebook. Replace user, passwprd, host, port, db, collection, with your own user information.
+3. Insert the test script into the first cell of the Jupyter Notebook. Replace user, passwprd, host, port, db, collection, with your own user information.
 4. If using a different database, please edit the Create and Read method to match your collection.
-5. Execute the code in Jupyter Notebook.
+5. Create a python script within the same directory of your Jupyter Notebook, using animal_shelter.py
+6. Execute the code in Jupyter Notebook.
