@@ -18,3 +18,14 @@ print(f"Insert success: {insert_success}")
 query = {"species": "Dog"}
 dogs = shelter.read(query)
 print(f"Found dogs: {dogs}")
+
+# Update a document in the collection
+update_query = {"name": "Max"}
+update_values = {"$set": {"age": 6}}
+update_success = shelter.update(update_query, update_values)
+print(f"Number of documents modified: {update_success}")
+
+# Delete a document from the collection
+delete_query = {"name": "Max"}
+delete_success = shelter.delete(delete_query)
+print(f"Number of documents deleted: {delete_success}")
