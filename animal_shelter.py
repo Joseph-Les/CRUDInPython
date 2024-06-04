@@ -69,7 +69,13 @@ class AnimalShelter(object):
             raise ValueError("Query and update values must be dictionaries and not None")
         
     def delete(self, query, delete_many=False):
-
+        """
+        Updates documents in the collection.
+        param query: A dictionary containing the key/value lookup pairs for the documents to update.
+        param update_values: A dictionary containing the key/value pairs for the update.
+        param update_many: A boolean indicating whether to update one or many documents.
+        return: The number of documents modified.
+        """
         if query is not None and isinstance(query, dict):
             try:
                 if delete_many:
