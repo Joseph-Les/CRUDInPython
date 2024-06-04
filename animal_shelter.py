@@ -46,3 +46,25 @@ class AnimalShelter(object):
                 return []
         else:
             raise ValueError("Query must be a dictionary and not None")
+    
+    def update(self, query, update_values, update_many=False):
+        """
+        Updates documents in the collection.
+        param query: A dictionary containing the key/value lookup pairs for the documents to update.
+        param update_values: A dictionary containing the key/value pairs for the update.
+        param update_many: A boolean indicating whether to update one or many documents.
+        return: The number of documents modified.
+        """
+        if query is not None and isinstance(query, dict) and update_values is not None and isinstance(update_values, dict):
+            try:
+                if update_many:
+                    result = self.collection.update_one(query, update_values)
+                else:
+                    result = self.collection.update_one(query, update_values)
+                return result.modified_count
+            except OperationFailure as e:
+                print(f"Could not update document(s): {e}")
+                return 0
+        else:
+            raise ValueError("Query and update values must be dictionaries and not None")
+        
