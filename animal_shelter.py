@@ -68,3 +68,17 @@ class AnimalShelter(object):
         else:
             raise ValueError("Query and update values must be dictionaries and not None")
         
+    def delete(self, query, delete_many=False):
+
+        if query is not None and isinstance(query, dict):
+            try:
+                if delete_many:
+                    result = self.collection.delet_many(query)
+                else:
+                    result = self.collection.delete_one(query)
+                return result.deleted_count
+            except OperationFailure as e:
+                print(f"Could not delete document(s): {e}")
+                return e
+        else:
+            raise ValueError("Query must be a dictionary and not None")
