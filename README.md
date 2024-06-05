@@ -6,8 +6,7 @@ This repo provides a Python module for performing CRUD (Create, Read, Update, De
 
 **Example**
 
-![Screenshot 2024-06-03 at 8 10 34 PM](https://github.com/Joseph-Les/CRUDInPython/assets/84045743/ce8ed756-0001-4742-91d9-a8bc731ed39f)
-
+![Screenshot 2024-06-03 at 8 12 18 PM](https://github.com/Joseph-Les/CRUDInPython/assets/84045743/52f22e7e-29c7-47ee-932b-2465e24d1ea4)
 
 **Setup Instructions**
 
