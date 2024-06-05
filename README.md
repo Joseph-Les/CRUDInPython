@@ -37,67 +37,41 @@ The AnimalShelter class is used to interact with the MongoDB collection. You nee
 
 The create method inserts a document into the collection.
 	
-	def create(self, data):
-        if data is not None and isinstance(data, dict):
-            try:
-                self.database.animals.insert_one(data)
-                return True
-            except OperationFailure as e:
-                print(f"Could not insert document: {e}")
-                return False
-        else:
-            raise ValueError("Data must be a dictionary and not None")
+	new_animal = {
+        "name": "Max",
+        "species": "Dog",
+        "breed": "Golden Retriever",
+        "age": 5,
+        "adopted": False
+    }
+    insert_success = shelter.create(new_animal)
+    print(f"Insert success: {insert_success}")
 
 **Read Method**
 
 The read method queries for documents in the collection based on a given query.
 
-	def read(self, query):
-        if query is not None and isinstance(query, dict):
-            try:
-                cursor = self.collection.find(query)
-                result = list(cursor)
-                return result
-            except OperationFailure as e:
-                print(f"Could not retrieve documents: {e}")
-                return []
-        else:
-            raise ValueError("Query must be a dictionary and not None")
+	query = {"species": "Dog"}
+    dogs = shelter.read(query)
+    print(f"Found dogs: {dogs}")
 
 **Update Method**
 
 The update method queries for document(s) in the collection based on query, then updates the given value(s)
 
-	 if query is not None and isinstance(query, dict) and update_values is not None and isinstance(update_values, dict):
-            try:
-                if update_many:
-                    result = self.collection.update_one(query, update_values)
-                else:
-                    result = self.collection.update_one(query, update_values)
-                return result.modified_count
-            except OperationFailure as e:
-                print(f"Could not update document(s): {e}")
-                return 0
-        else:
-            raise ValueError("Query and update values must be dictionaries and not None")
+	 update_query = {"name": "Max"}
+    update_values = {"$set": {"age": 6}}
+    update_success = shelter.update(update_query, update_values)
+    print(f"Number of documents modified: {update_success}")
 
 **Delete Method**
 
 The delete method queries for document(s) in the collection based on the query, then deletes the given value(s)
 
-	if query is not None and isinstance(query, dict):
-            try:
-                if delete_many:
-                    result = self.collection.delet_many(query)
-                else:
-                    result = self.collection.delete_one(query)
-                return result.deleted_count
-            except OperationFailure as e:
-                print(f"Could not delete document(s): {e}")
-                return e
-        else:
-            raise ValueError("Query must be a dictionary and not None")
-
+	delete_query = {"name": "Max"}
+    delete_success = shelter.delete(delete_query)
+    print(f"Number of documents deleted: {delete_success}")
+    
 **Testing**
 
 To ensure the functionality of the module, follow these steps to test it using a Jupyter Notebook.
